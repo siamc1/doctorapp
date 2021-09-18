@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'users.apps.UsersConfig',
     'landing.apps.LandingConfig',
     'database.apps.DatabaseConfig',
     'django.contrib.admin',

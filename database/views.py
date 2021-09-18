@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .models import Patient
 patients = [
     {
         'name': 'John Smith',
@@ -19,7 +19,7 @@ patients = [
 
 def home(request):
     context = {
-        'patients': patients
+        'patients': Patient.objects.all()
     }
     return render(request, 'database/patients.html', context)
 
