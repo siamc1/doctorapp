@@ -1,10 +1,176 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+	<title>Snake Eyes</title>
+	<style>
+		#background {
+			background: rgb(2,0,36);
+			background: linear-gradient(163deg, rgba(2,0,36,1) 0%, rgba(10,9,145,1) 4%, rgba(21,60,164,1) 37%, rgba(46,181,208,1) 100%);
+		}
+		p,h1,h2,h3,h4,h5,h6,a,div {
+			font-family: sans-serif;
+		}
+		.content_right {
+			position: absolute;
+			left: 70%;
+			top: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+		}
+		.content_left {
+			position: absolute;
+			left: 30%;
+			top: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			color: white;
+		}
+		#main-back {
+			background-color: white;
+
+		}
+		.link-footer {
+			text-decoration: none;
+			color: white;
+		}
+	</style>
 </head>
 <body>
-<h1>Landing Page</h1>
+	<div id="background" style="padding-bottom: 10%;">
+		<!-- Navbar -->
+		<nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
+			<!-- Container wrapper -->
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">
+					<img src="snakeeyes.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+					Snake Eyes
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarText">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="#"></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Features</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">About Us</a>
+						</li>
+					</ul>
+					<span class="navbar-text">
+						<a href="" style="text-decoration: none;">Register</a>
+						<button class="btn btn-outline-light me-2" type="button" style="color: white;">Sign In</button>
+					</span>
+				</div>
+			</div>
+		</nav>
+		<!-- Navbar -->
+		<!--Landing page-->
+		<!--
+		<div style="padding-top: 2%; padding-bottom: 2%;padding-left: 10%; padding-right: 10%; height: 100vh;">
+			<div style="display: flex; justify-content: space-around;">
+				<div class="content_left">
+					<h1>
+						Snake Eyes
+					</h1>
+					<h3>Predicting the emergency!</h3>
+					<h5>View patients status when on call <br> Notification of potential emergencies before it happens</h5>
+				</div>
+				<div class="content_right">
+					<img src="med.svg" class="img-fluid" alt="...">
+				</div>
+
+
+			</div>
+
+		</div>
+	-->
+	<div style="padding-top: 15%; padding-bottom: 2%;padding-left: 10%; padding-right: 10%; height: 70vh;">
+		<div style="display: flex; justify-content: space-around;">
+
+			<div style="color: white;">
+				<h1>
+					Snake Eyes
+				</h1>
+				<h3>Predicting the emergency!</h3>
+				<h5>View patients status when on call <br> Notification of potential emergencies before it happens</h5>
+			</div>
+			<div style="display: flex; width: 35%;">
+				<img src="med.svg" class="img-fluid" alt="...">
+			</div>
+
+
+		</div>
+
+	</div>
+
+
+</div>
+
+<main id="main-back" class="container">
+	<h1 style="text-align: center; padding-top: 5%; padding-bottom: 3%">How Snake Eyes Works</h1>
+	<div style="display: flex; justify-content: space-around; padding-bottom: 4%">
+
+		<div class="shadow-lg p-3 mb-5 bg-body rounded" style="width: 40%;">
+			<h4 style="text-align: center;">Displaying patients status</h4>
+			<p>By connecting the hospitals database to the app, doctors can view the vitals and important information of their patients from their phone or laptop when on call</p>
+			<div style="text-align: center; margin-top: 8%"><img src="signs.svg" class="img-fluid" alt="..." width="50%"></div>
+		</div>
+		<div class="shadow-lg p-3 mb-5 bg-body rounded" style="width: 40%;">
+			<h4 style="text-align: center;">Predicting the emergencies</h4>
+			<p>With the database connected the app, we use our machine learning model to predict and alert doctors of potential emergencies allowing them to be prepared</p>
+			<div style="text-align: center; margin-top: 8%"><img src="data.svg" class="img-fluid" alt="..." width="50%"></div>
+		</div>
+
+
+	</div>
+
+</main>
+<footer style="background-color: #1a1a1a; color: white;">
+	<br><br>
+	<div class="container" style="">
+		<div class="bottom-div" style="display: flex;justify-content: space-around; text-decoration: none;">
+			<div class="color-white">
+				<h4>Info</h4>
+				<div>
+					<p><a href="#" class="link-footer">Features</a></p>
+					<p><a href="#" class="link-footer">About Us</a></p>
+				</div>
+			</div>
+			<div class="color-white">
+				<h4>Account</h4>
+				<div>
+					<p><a href="#" class="link-footer">Register</a></p>
+					<p><a href="#" class="link-footer">Sign in</a></p>
+				</div>
+			</div>
+		</div>
+		<br>
+		<h6 style="text-align: center;">
+			&#169;2021 Snake Eyes
+		</h6>
+	</div>
+	<br><br>
+</footer>
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+-->
 </body>
 </html>
