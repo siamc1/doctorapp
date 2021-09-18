@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% for patient in patients %}
+        <h1>{{ patient.name }}</h1>
+        <p>DOB: {{ patient.DOB }}</p>
+        <p>sex: {{ patient.sex }}</p>
+        <p>blood pressure: {{ patient.blood_pressure }}</p>
+    {% endfor %}
+</body>
+</html>
