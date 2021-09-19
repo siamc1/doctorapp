@@ -90,19 +90,21 @@
 	<main>
 		<div class="container" style="margin-top: 4%">
 			<div class="shadow p-3 mb-5 bg-body rounded">
-				<h1>Patient Name</h1>
+				<h1>{{ object.name }}</h1>
 				<br><br>
-				<h4>Date of birth:</h4>
-				<h4>Sex: </h4>
-				<h4>Blood pressure: </h4>
-				<h4>Risk factor:</h4>
+				<h4>Date of birth: {{ object.DOB }}</h4>
+				<h4>Sex: {{ object.sex }}</h4>
+				<h4>Blood pressure: {{ object.blood_pressure }}</h4>
+				<h4>Risk factor: {{ object.risk_factor }}</h4>
 				<br>
 				<h4>Additional info:</h4>
 
 				<br><br>
 			</div>
 
-			<div style="text-align: right;"><button type="button" class="btn btn-outline-dark">Back</button></div>
+			<div style="text-align: right;">
+                <a href="{% url 'database-home' %}"><button type="button" class="btn btn-outline-dark">Back</button></a>
+            </div>
 			<br><br>
 
 		</div>

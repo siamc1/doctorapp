@@ -1,23 +1,7 @@
 from django.shortcuts import render
+from django.views.generic import ListView, DetailView
 from .models import Patient
 from django.contrib.auth.decorators import login_required
-
-patients = [
-    {
-        'name': 'John Smith',
-        'DOB': 'April 4, 2002',
-        'sex': 'Male',
-        'blood_pressure': 'High',
-        'risk_factor': 0.3
-    },
-    {
-        'name': 'Jane Doe',
-        'DOB': 'September 20, 1994',
-        'sex': 'Female',
-        'blood_pressure': 'Moderate',
-        'risk_factor': 0.1
-    }
-]
 
 @login_required()
 def home(request):
@@ -26,9 +10,18 @@ def home(request):
     }
     return render(request, 'database/patients.html', context)
 
+class PatientListView(ListView):
+    model = Patient
+    template_name = 'database/patients.html'
+    context_object_name = 'patients'
+    ordering = ['-risk_factor']
+
+class PatientDetailView(DetailView):
+    model = Patient
+
 @login_required()
 def profile(request):
-    return render(request, 'database/profile.html')
+    return render(request, 'database/patient_detail.html')
 
 def about(request):
     return render(request, 'database/about.html')
