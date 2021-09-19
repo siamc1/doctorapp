@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from .models import Patient
+from django.contrib.auth.decorators import login_required
+
 patients = [
     {
         'name': 'John Smith',
@@ -17,11 +19,16 @@ patients = [
     }
 ]
 
+@login_required()
 def home(request):
     context = {
         'patients': Patient.objects.all()
     }
     return render(request, 'database/patients.html', context)
+
+@login_required()
+def profile(request):
+    return render(request, 'database/profile.html')
 
 def about(request):
     return render(request, 'database/about.html')

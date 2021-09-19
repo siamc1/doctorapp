@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -51,8 +52,8 @@
 		<nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
 			<!-- Container wrapper -->
 			<div class="container-fluid">
-				<a class="navbar-brand" href="#">
-					<img src="snakeeyes.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+				<a class="navbar-brand" href="{% url 'landing-home' %}">
+					<img src="{% static '/images/snakeeyes.png' %}" alt="" width="30" height="24" class="d-inline-block align-text-top">
 					Snake Eyes
 				</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,7 +72,7 @@
 						</li>
 					</ul>
 					<span class="navbar-text">
-						<p>Doctor Name</p>
+						<a href="{% url 'logout' %}" style="text-decoration: none;">Logout</a>
 					</span>
 				</div>
 			</div>
@@ -106,20 +107,6 @@
                 {% endfor %}
 			</div>
 
-
-			<nav aria-label="Page navigation example" style="margin-top: 3%">
-				<ul class="pagination justify-content-end">
-					<li class="page-item disabled">
-						<a class="page-link">Previous</a>
-					</li>
-					<li class="page-item"><a class="page-link" href="#">1</a></li>
-					<li class="page-item"><a class="page-link" href="#">2</a></li>
-					<li class="page-item"><a class="page-link" href="#">3</a></li>
-					<li class="page-item">
-						<a class="page-link" href="#">Next</a>
-					</li>
-				</ul>
-			</nav>
 		</div>
 	</main>
 

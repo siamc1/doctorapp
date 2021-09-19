@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -48,8 +49,8 @@
 		<nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
 			<!-- Container wrapper -->
 			<div class="container-fluid">
-				<a class="navbar-brand" href="#">
-					<img src="snakeeyes.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+				<a class="navbar-brand" href="{% url 'landing-home' %}">
+					<img src="{% static '/images/snakeeyes.png' %}" alt="" width="30" height="24" class="d-inline-block align-text-top">
 					Snake Eyes
 				</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,8 +69,8 @@
 						</li>
 					</ul>
 					<span class="navbar-text">
-						<a href="" style="text-decoration: none;">Register</a>
-						<button class="btn btn-outline-light me-2" type="button" style="color: white;">Sign In</button>
+						<a href="{% url 'register' %}" style="text-decoration: none;">Register</a>
+						<a href="{% url 'login' %}"><button class="btn btn-outline-light me-2" type="button" style="color: white;">Sign In</button></a>
 					</span>
 				</div>
 			</div>
@@ -113,7 +114,7 @@
 				<h5>View patients status when on call <br> Notification of potential emergencies before it happens</h5>
 			</div>
 			<div style="display: flex; width: 35%;">
-				<img src="med.svg" class="img-fluid" alt="...">
+				<img src="{% static '/images/med.svg' %}" class="img-fluid" alt="...">
 			</div>
 
 
@@ -131,12 +132,12 @@
 		<div class="shadow-lg p-3 mb-5 bg-body rounded" style="width: 40%;">
 			<h4 style="text-align: center;">Displaying patients status</h4>
 			<p>By connecting the hospitals database to the app, doctors can view the vitals and important information of their patients from their phone or laptop when on call</p>
-			<div style="text-align: center; margin-top: 8%"><img src="signs.svg" class="img-fluid" alt="..." width="50%"></div>
+			<div style="text-align: center; margin-top: 8%"><img src="{% static '/images/signs.svg' %}" class="img-fluid" alt="..." width="50%"></div>
 		</div>
 		<div class="shadow-lg p-3 mb-5 bg-body rounded" style="width: 40%;">
 			<h4 style="text-align: center;">Predicting the emergencies</h4>
 			<p>With the database connected the app, we use our machine learning model to predict and alert doctors of potential emergencies allowing them to be prepared</p>
-			<div style="text-align: center; margin-top: 8%"><img src="data.svg" class="img-fluid" alt="..." width="50%"></div>
+			<div style="text-align: center; margin-top: 8%"><img src="{% static '/images/data.svg' %}" class="img-fluid" alt="..." width="50%"></div>
 		</div>
 
 
